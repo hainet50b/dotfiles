@@ -29,3 +29,75 @@ unset rc
 
 # Starship
 eval "$(starship init bash)"
+
+# Java
+java_dist='eclipse-temurin'
+java_lts='25-jdk'
+
+cjava() {
+  local tag="${1:-$java_lts}"
+  docker run --rm -it \
+    -v "$PWD:/workdir" -w /workdir \
+    "$java_dist:$tag" \
+    /bin/bash -lc 'java -version; echo; pwd; ls; echo; exec /bin/bash'
+}
+
+cjava_25() { cjava 25-jdk; }
+cjava_21() { cjava 21-jdk; }
+
+# JShell
+cjshell() {
+  local tag="${1:-$java_lts}"
+  docker run --rm -it $java_dist:$tag jshell
+}
+
+cjshell_25() { cjshell 25-jdk; }
+cjshell_21() { cjshell 21-jdk; }
+
+# Maven
+mvn_java_lts='3-eclipse-temurin-25'
+
+# NOTE:
+# Maven options must be passed after '--'
+# e.g. cmvn -- -DskipTests clean package
+cmvn() {
+  local tag=$mvn_java_lts port=''
+
+  local OPTIND
+  while getopts ':p:t:' opt; do
+    case $opt in
+      p) port=$OPTARG ;;
+      t) tag=$OPTARG ;;
+    esac
+  done
+  shift $((OPTIND - 1))
+
+  local -a port_option=()
+  if [[ -n $port ]]; then
+    port_option=(-p "$port:$port")
+  fi
+
+  echo "$@"
+
+  docker run --rm -it \
+    -v "$PWD:/workdir" -w /workdir \
+    -v dot_m2:/root/.m2 \
+    "${port_option[@]}" \
+    maven:$tag \
+    /bin/bash -lc '
+      mvn -v
+      echo
+      pwd
+      ls
+      echo
+      if [ "$#" -gt 0 ]; then
+        exec mvn "$@"
+      else
+        exec /bin/bash
+      fi
+    ' -- "$@"
+}
+
+cmvn_25() { cmvn -t 3-eclipse-temurin-25 "$@"; }
+cmvn_21() { cmvn -t 3-eclipse-temurin-21 "$@"; }
+
