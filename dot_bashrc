@@ -36,8 +36,9 @@ java_lts='25-jdk'
 
 cjava() {
   local tag="${1:-$java_lts}"
-  docker run --rm -it \
-    -v "$PWD:/workdir" -w /workdir \
+  docker container run --rm -it \
+    --mount type=bind,src=$PWD,dst=/workdir \
+    -w /workdir \
     "$java_dist:$tag" \
     /bin/bash -lc 'java -version; echo; pwd; ls; echo; exec /bin/bash'
 }
@@ -48,7 +49,7 @@ cjava_21() { cjava 21-jdk; }
 # JShell
 cjshell() {
   local tag="${1:-$java_lts}"
-  docker run --rm -it $java_dist:$tag jshell
+  docker container run --rm -it $java_dist:$tag jshell
 }
 
 cjshell_25() { cjshell 25-jdk; }
@@ -79,9 +80,10 @@ cmvn() {
 
   echo "$@"
 
-  docker run --rm -it \
-    -v "$PWD:/workdir" -w /workdir \
-    -v dot_m2:/root/.m2 \
+  docker container run --rm -it \
+    --mount type=bind,src=$PWD,dst=/workdir \
+    -w /workdir \
+    --mount type=volume,src=dot_m2,dst=/root/.m2 \
     "${port_option[@]}" \
     maven:$tag \
     /bin/bash -lc '
