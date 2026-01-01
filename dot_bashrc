@@ -16,7 +16,7 @@ eval "$(starship init bash)"
 
 # User specific functions or tools
 if [ -d "$HOME/.bashrc.d" ]; then
-  for f in "$HOME/.bashrc.d/*.bash"; do
+  for f in "$HOME"/.bashrc.d/*.bash; do
     [ -r "$f" ] && . "$f"
   done
 fi
