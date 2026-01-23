@@ -3,3 +3,5 @@
 	email = 20400616+hainet50b@users.noreply.github.com
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
