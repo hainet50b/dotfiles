@@ -33,7 +33,7 @@ return {
         require('telescope.builtin').buffers()
       end)
 
-      vim.keymap.set("n", "<space>en", function()
+      vim.keymap.set("n", "<space>ef", function()
         require('telescope.builtin').find_files {
           cwd = vim.fn.stdpath('config')
         }
