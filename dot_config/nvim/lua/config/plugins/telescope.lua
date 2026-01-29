@@ -12,6 +12,9 @@ return {
           find_files = {
             theme = 'ivy'
           },
+          buffers = {
+            theme = 'ivy'
+          },
         },
         extensions = {
           fzf = {}
