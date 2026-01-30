@@ -20,9 +20,23 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 vim.keymap.set("n", "<M-j>", vim.cmd.cnext)
 vim.keymap.set("n", "<M-k>", vim.cmd.cprevious)
 
-vim.keymap.set("n", "<space>tt", "<cmd>term<CR>")
-vim.keymap.set("n", "<space>tj", "<cmd>botright split | term<CR>")
-vim.keymap.set("n", "<space>tl", "<cmd>botright vsplit | term<CR>")
+vim.keymap.set("n", "<space>tt", vim.cmd.term)
+vim.keymap.set("n", "<space>tj", function()
+  vim.cmd("botright split")
+  vim.cmd.term()
+end)
+vim.keymap.set("n", "<space>tl", function()
+  vim.cmd("botright vsplit")
+  vim.cmd.term()
+end)
+
+vim.api.nvim_create_autocmd("TermOpen", {
+  desc = "Start terminal in insert mode",
+  group = vim.api.nvim_create_augroup("pmacho-term-insert-mode", { clear = true }),
+  callback = function()
+    vim.cmd.startinsert()
+  end,
+})
 
 -- vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
 vim.keymap.set("t", "fd", "<C-\\><C-N>")
