@@ -24,6 +24,9 @@ vim.keymap.set("n", "<space>tt", "<cmd>term<CR>")
 vim.keymap.set("n", "<space>tj", "<cmd>botright split | term<CR>")
 vim.keymap.set("n", "<space>tl", "<cmd>botright vsplit | term<CR>")
 
+-- vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
+vim.keymap.set("t", "fd", "<C-\\><C-N>")
+
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking text.",
   group = vim.api.nvim_create_augroup("pmacho-highlight-yank", { clear = true }),
