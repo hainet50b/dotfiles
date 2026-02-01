@@ -1,0 +1,25 @@
+" Mode
+inoremap fd <Esc>
+
+" IdeaVim
+nnoremap <Space><Space>x :source ~/.ideavimrc<CR>
+
+" Language
+nnoremap <Space>fo :action ReformatCode<CR>
+
+" Tab
+nnoremap <Space>wl :action MoveTabRight<CR>
+nnoremap <Space>wj :action MoveTabDown<CR>
+nnoremap <Space>wo :action MoveEditorToOppositeTabGroup<CR>
+
+" Termianl
+nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
+" also in IDE setting
+" nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
+
+" Search
+nnoremap <Space>fe :action ShowSettings<CR>
+nnoremap <Space>fa :action SearchEverywhere<CR>
+nnoremap <Space>ff :action GotoFile<CR>
+nnoremap <Space>gf :action FindInPath<CR>
+
