@@ -2,7 +2,7 @@
 inoremap fd <Esc>
 
 " IdeaVim
-nnoremap <Space><Space>x :source ~/.ideavimrc<CR>
+nnoremap <Space><Space>x :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Language
 nnoremap <Space>fo :action ReformatCode<CR>
