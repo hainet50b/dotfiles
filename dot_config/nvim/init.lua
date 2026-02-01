@@ -1,6 +1,10 @@
 -- Plugin
 require("config.lazy")
 
+-- Title
+vim.opt.title = true
+vim.opt.titlestring = "%t"
+
 -- Editor
 vim.opt.number = true
 vim.opt.expandtab = true
