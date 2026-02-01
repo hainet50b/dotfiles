@@ -1,5 +1,3 @@
-print("~/.config/nvim/init.lua has loaded")
-
 require("config.lazy")
 
 local set = vim.opt
