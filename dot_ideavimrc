@@ -9,6 +9,10 @@ set clipboard=unnamedplus
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = "100"
 
+" Extend Vim text objects with Vim AnyObject
+" https://plugins.jetbrains.com/plugin/28333-vim-anyobject
+set anyobject
+
 " Mode
 inoremap fd <Esc>
 
