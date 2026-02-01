@@ -1,16 +1,28 @@
+-- Plugin
 require("config.lazy")
 
-local set = vim.opt
+-- Editor
+vim.opt.number = true
+vim.opt.expandtab = true
 
-set.expandtab = true
-set.tabstop = 4
-set.shiftwidth = 4
-set.number = true
-set.clipboard = 'unnamedplus'
+-- Search and Highlight
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
+
+-- Clipboard
+vim.opt.clipboard = 'unnamedplus'
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking text.",
+  group = vim.api.nvim_create_augroup("pmacho-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 
 -- Mode
-vim.keymap.set("i", "fd", "<ESC>")
--- vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
+vim.keymap.set("i", "fd", "<Esc>")
+-- vim.keymap.set("t", "<Esc>", "<C-\\><C-N>")
 vim.keymap.set("t", "fd", "<C-\\><C-N>")
 
 -- Lua
@@ -53,11 +65,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
 -- Quickfix
 vim.keymap.set("n", "<M-j>", vim.cmd.cnext)
 vim.keymap.set("n", "<M-k>", vim.cmd.cprevious)
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking text.",
-  group = vim.api.nvim_create_augroup("pmacho-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
