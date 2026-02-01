@@ -14,6 +14,9 @@ let g:highlightedyank_highlight_duration = "100"
 set anyobject
 Plug 'vim-scripts/argtextobj.vim'
 
+" Comment
+Plug 'tpope/vim-commentary'
+
 " Mode
 inoremap fd <Esc>
 
