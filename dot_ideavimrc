@@ -12,9 +12,9 @@ nnoremap <Space>wl :action MoveTabRight<CR>
 nnoremap <Space>wj :action MoveTabDown<CR>
 nnoremap <Space>wo :action MoveEditorToOppositeTabGroup<CR>
 
-" Termianl
+" Terminal
 nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
-" also in IDE setting
+" Also defined in IDE keymap settings
 " nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
 
 " Search
