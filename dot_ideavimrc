@@ -18,7 +18,8 @@ nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
 " nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
 
 " Search
-nnoremap <Space>fe :action ShowSettings<CR>
+nnoremap <Space>fe :edit ~/.ideavimrc<CR>
+nnoremap <Space>fs :action ShowSettings<CR>
 nnoremap <Space>fa :action SearchEverywhere<CR>
 nnoremap <Space>ff :action GotoFile<CR>
 nnoremap <Space>gf :action FindInPath<CR>
