@@ -12,7 +12,7 @@ vim.opt.expandtab = true
 -- Search and Highlight
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.keymap.set("n", "<Esc><Esc>", vim.cmd.nohlsearch)
+vim.keymap.set("n", "<space>nhl", vim.cmd.nohlsearch)
 
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
