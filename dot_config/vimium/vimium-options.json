@@ -1,0 +1,8 @@
+{
+  "exclusionRules": [],
+  "keyMappings": "unmapAll\n\n\" Scroll\nmap j scrollDown\nmap k scrollUp\nmap <C-d> scrollPageDown\nmap <C-u> scrollPageUp\n\" map <C-f> scrollFullPageDown\n\" map <C-b> scrollFullPageUp\n\nmap gg scrollToTop\nmap G scrollToBottom\n\n\" Link Hints\nmap f LinkHints.activateMode\n\n\" Mode\nmap v enterVisualMode\n\" map vc enterCaretMode\nmap V enterVisualLineMode\n\n\" Reload\n\" map <C-r> reload\nunmap r\n\n\" Search\nmap <Space>fs createTab chrome://settings/\nmap <Space>fo Vomnibar.activate\nmap <Space>fO Vomnibar.activateInNewTab\nmap <Space>fm Vomnibar.activateBookmarks\nmap <Space>fM Vomnibar.activateBookmarksInNewTab\nmap <Space>fb Vomnibar.activateTabSelection\n\n\" Find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n\" HIstory\nmap <C-o> goBack\nmap <C-i> goForward\n\n\" Tab\nmap <Space>ww createTab\nmap <Space>wj createTab\nmap <Space>wl createTab\nmap wj nextTab\nmap wk previousTab\nmap wl nextTab\nmap wh previousTab\nmap wc removeTab\nmap wu restoreTab\n\n\" Help\nmap <Space>hh showHelp",
+  "newTabDestination": "browserNewTabPage",
+  "openVomnibarOnNewTabPage": false,
+  "searchEngines": "",
+  "settingsVersion": "2.4.0"
+}
