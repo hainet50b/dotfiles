@@ -1,5 +1,3 @@
-# .bashrc
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -11,12 +9,6 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# sudoedit
-export SUDO_EDITOR=/usr/bin/nvim
-
-# Starship
-eval "$(starship init bash)"
-
 # User specific functions or tools
 if [ -d "$HOME/.bashrc.d" ]; then
   for f in "$HOME"/.bashrc.d/*.bash; do
@@ -24,3 +16,10 @@ if [ -d "$HOME/.bashrc.d" ]; then
   done
 fi
 unset f
+
+# sudoedit
+export SUDO_EDITOR=/usr/bin/nvim
+
+# Starship
+eval "$(starship init bash)"
+
