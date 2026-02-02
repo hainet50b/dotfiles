@@ -1,0 +1,76 @@
+{
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+
+  "vim.useSystemClipboard": true,
+
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 100,
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["f", "d"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Space>", "n", "h", "l"],
+      "commands": [":nohlsearch"]
+    },
+
+    {
+      "before": ["<Space>", "f", "o"],
+      "commands": ["editor.action.formatDocument"]
+    },
+
+    {
+      "before": ["<Space>", "w", "l"],
+      "commands": ["workbench.action.moveEditorToRightGroup"]
+    },
+    {
+      "before": ["<Space>", "w", "j"],
+      "commands": ["workbench.action.moveEditorToBelowGroup"]
+    },
+    {
+      "before": ["<Space>", "w", "o"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+
+    {
+      "before": ["<Space>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+
+    {
+      "before": ["<Space>", "f", "e"],
+      "commands": ["workbench.action.openSettingsJson"]
+    },
+    {
+      "before": ["<Space>", "f", "s"],
+      "commands": ["workbench.action.openSettings"]
+    },
+    {
+      "before": ["<Space>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<Space>", "f", "b"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["<Space>", "f", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+
+    {
+      "before": ["<Space>", "g", "g"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["<Space>", "g", "f"],
+      "commands": ["workbench.action.findInFiles"]
+    }
+  ]
+}
