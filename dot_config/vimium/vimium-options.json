@@ -4,5 +4,6 @@
   "newTabDestination": "browserNewTabPage",
   "openVomnibarOnNewTabPage": false,
   "searchEngines": "",
-  "settingsVersion": "2.4.0"
+  "settingsVersion": "2.4.0",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n  /* linkhint boxes */\n  background: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0%,#FFF785),\n    color-stop(100%,#FFC542)\n  );\n  border: 1px solid #E3BE23;\n\n  transform: translate(-10px, -10px);\n}\n\ndiv > .vimiumHintMarker span {\n  /* linkhint text */\n  color: black;\n  font-weight: bold;\n  font-size: 10px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
 }
