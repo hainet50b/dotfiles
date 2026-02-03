@@ -7,6 +7,7 @@ vim.opt.titlestring = "%t"
 
 -- Editor
 vim.opt.number = true
+vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = 'lead:·,trail:·'
