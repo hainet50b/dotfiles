@@ -5,6 +5,18 @@ return {
     version = false,
     config = function()
       require('mini.statusline').setup()
+      local animate = require('mini.animate')
+      animate.setup {
+        cursor = {
+          enable = false,
+        },
+        scroll = {
+          timing = animate.gen_timing.linear({
+            duration = 80,
+            unit = 'total',
+          }),
+        },
+      }
 
       require('mini.map').setup {
         window = {
