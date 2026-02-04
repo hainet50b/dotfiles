@@ -43,18 +43,35 @@ return {
         { desc = "Find files in Neovim config directory (including dotfiles)" }
       )
       vim.keymap.set(
-        "n", "<Space>ff", function()
+        "n", "<Space>fd", function()
           builtin.find_files()
         end,
         { desc = "Find files in current directory" }
       )
       vim.keymap.set(
-        "n", "<Space>fF", function()
+        "n", "<Space>fD", function()
           builtin.find_files {
             hidden = true,
           }
         end,
         { desc = "Find files in current directory (including dotfiles)" }
+      )
+      vim.keymap.set(
+        "n", "<Space>ff", function()
+          builtin.find_files {
+            cwd = vim.fn.expand("%:p:h"),
+          }
+        end,
+        { desc = "Find files in current file directory" }
+      )
+      vim.keymap.set(
+        "n", "<Space>fF", function()
+          builtin.find_files {
+            cwd = vim.fn.expand("%:p:h"),
+            hidden = true,
+          }
+        end,
+        { desc = "Find files in current file directory (including dotfiles)" }
       )
       vim.keymap.set(
         "n", "<Space>fh", function()

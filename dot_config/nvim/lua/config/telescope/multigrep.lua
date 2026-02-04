@@ -56,8 +56,16 @@ M.setup = function()
     { desc = "Grep Neovim config directory" }
   )
   vim.keymap.set(
-    "n", "<Space>gf", live_multigrep,
+    "n", "<Space>gd", live_multigrep,
     { desc = "Grep current directory" }
+  )
+  vim.keymap.set(
+    "n", "<Space>gf", function()
+      live_multigrep {
+        cwd = vim.fn.expand('%:p:h'),
+      }
+    end,
+    { desc = "Grep current file directory" }
   )
 end
 

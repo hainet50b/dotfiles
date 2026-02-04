@@ -60,7 +60,7 @@
       "commands": ["workbench.action.openSettings"]
     },
     {
-      "before": ["<Space>", "f", "f"],
+      "before": ["<Space>", "f", "d"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
@@ -77,7 +77,7 @@
       "commands": ["actions.find"]
     },
     {
-      "before": ["<Space>", "g", "f"],
+      "before": ["<Space>", "g", "d"],
       "commands": ["workbench.action.findInFiles"]
     }
   ],
