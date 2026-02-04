@@ -15,7 +15,7 @@ vim.opt.listchars = 'lead:·,trail:·'
 -- Search and Highlight
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.keymap.set("n", "<space>nhl", vim.cmd.nohlsearch)
+vim.keymap.set("n", "<Space>nhl", vim.cmd.nohlsearch)
 
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
@@ -33,40 +33,40 @@ vim.keymap.set("i", "fd", "<Esc>")
 vim.keymap.set("t", "fd", "<C-\\><C-N>")
 
 -- Lua
-vim.keymap.set("n", "<space><space>x", ":source %<cr>")
-vim.keymap.set("n", "<space>x", ":.lua<cr>")
-vim.keymap.set("v", "<space>x", ":lua<cr>")
+vim.keymap.set("n", "<Space><Space>x", ":source %<cr>")
+vim.keymap.set("n", "<Space>x", ":.lua<cr>")
+vim.keymap.set("v", "<Space>x", ":lua<cr>")
 
 -- LSP
-vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end)
+vim.keymap.set("n", "<Space>fo", function() vim.lsp.buf.format() end)
 
 -- Window
-vim.keymap.set("n", "<space>wl", function()
+vim.keymap.set("n", "<Space>wl", function()
   vim.cmd.vsplit()
   vim.cmd.wincmd("l")
 end)
-vim.keymap.set("n", "<space>wh", vim.cmd.vsplit)
-vim.keymap.set("n", "<space>wj", function()
+vim.keymap.set("n", "<Space>wh", vim.cmd.vsplit)
+vim.keymap.set("n", "<Space>wj", function()
   vim.cmd.split()
   vim.cmd.wincmd("j")
 end)
-vim.keymap.set("n", "<space>wk", vim.cmd.split)
+vim.keymap.set("n", "<Space>wk", vim.cmd.split)
 
 -- Terminal
-vim.keymap.set("n", "<space>tt", vim.cmd.term)
-vim.keymap.set("n", "<space>tj", function()
+vim.keymap.set("n", "<Space>tt", vim.cmd.term)
+vim.keymap.set("n", "<Space>tj", function()
   vim.cmd("botright split")
   vim.cmd.term()
 end)
-vim.keymap.set("n", "<space>tk", function()
+vim.keymap.set("n", "<Space>tk", function()
   vim.cmd.split()
   vim.cmd.term()
 end)
-vim.keymap.set("n", "<space>tl", function()
+vim.keymap.set("n", "<Space>tl", function()
   vim.cmd("botright vsplit")
   vim.cmd.term()
 end)
-vim.keymap.set("n", "<space>th", function()
+vim.keymap.set("n", "<Space>th", function()
   vim.cmd.vsplit()
   vim.cmd.term()
 end)

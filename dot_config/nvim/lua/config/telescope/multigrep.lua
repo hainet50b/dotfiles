@@ -47,8 +47,8 @@ local live_multigrep = function(opts)
 end
 
 M.setup = function()
-  vim.keymap.set("n", "<space>gf", live_multigrep)
-  vim.keymap.set("n", "<space>ge", function()
+  vim.keymap.set("n", "<Space>gf", live_multigrep)
+  vim.keymap.set("n", "<Space>ge", function()
     live_multigrep {
       cwd = vim.fn.stdpath('config'),
     }
