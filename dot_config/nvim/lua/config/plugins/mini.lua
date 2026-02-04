@@ -4,7 +4,19 @@ return {
     enabled = true,
     version = false,
     config = function()
+      -- mini.statusline
       require('mini.statusline').setup()
+
+      -- mini.animate
+      local mouse_scrolled = false
+      for _, dir in ipairs({ "Up", "Down" }) do
+        local key = "<ScrollWheel" .. dir .. ">"
+        vim.keymap.set({ "", "i" }, key, function()
+          mouse_scrolled = true
+          return key
+        end, { expr = true })
+      end
+
       local animate = require('mini.animate')
       animate.setup {
         cursor = {
@@ -15,9 +27,20 @@ return {
             duration = 80,
             unit = 'total',
           }),
+          subscroll = animate.gen_subscroll.equal({
+            predicate = function()
+              if mouse_scrolled then
+                mouse_scrolled = false
+                return false
+              else
+                return true
+              end
+            end,
+          })
         },
       }
 
+      -- mini.map
       require('mini.map').setup {
         window = {
           focusable = true,
