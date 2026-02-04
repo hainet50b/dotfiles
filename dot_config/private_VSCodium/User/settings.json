@@ -30,8 +30,16 @@
       "commands": ["workbench.action.moveEditorToRightGroup"]
     },
     {
+      "before": ["<Space>", "w", "h"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"]
+    },
+    {
       "before": ["<Space>", "w", "j"],
       "commands": ["workbench.action.moveEditorToBelowGroup"]
+    },
+    {
+      "before": ["<Space>", "w", "k"],
+      "commands": ["workbench.action.moveEditorToAboveGroup"]
     },
     {
       "before": ["<Space>", "w", "o"],
