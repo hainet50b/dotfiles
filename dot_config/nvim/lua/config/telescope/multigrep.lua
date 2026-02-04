@@ -47,12 +47,18 @@ local live_multigrep = function(opts)
 end
 
 M.setup = function()
-  vim.keymap.set("n", "<Space>gf", live_multigrep)
-  vim.keymap.set("n", "<Space>ge", function()
-    live_multigrep {
-      cwd = vim.fn.stdpath('config'),
-    }
-  end)
+  vim.keymap.set(
+    "n", "<Space>ge", function()
+      live_multigrep {
+        cwd = vim.fn.stdpath('config'),
+      }
+    end,
+    { desc = "Grep Neovim config directory" }
+  )
+  vim.keymap.set(
+    "n", "<Space>gf", live_multigrep,
+    { desc = "Grep current directory" }
+  )
 end
 
 return M

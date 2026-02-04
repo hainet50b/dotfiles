@@ -26,9 +26,12 @@ return {
       vim.api.nvim_set_hl(0, "MiniMapNormal", { fg = "#555555" })
       vim.api.nvim_set_hl(0, "MiniMapSymbolLine", { fg = "#ffffff" })
       vim.api.nvim_set_hl(0, "MiniMapSymbolView", { fg = "#aaaaaa" })
-      vim.keymap.set("n", "<Space>mm", function()
-        MiniMap.toggle()
-      end)
+      vim.keymap.set(
+        "n", "<Space>mm", function()
+          MiniMap.toggle()
+        end,
+        { desc = "Toggle mini map (mini.map)" }
+      )
     end,
   },
 }
