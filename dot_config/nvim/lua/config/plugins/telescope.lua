@@ -23,9 +23,11 @@ return {
 
       require('telescope').load_extension('fzf')
 
+      local builtin = require('telescope.builtin')
+
       vim.keymap.set(
         "n", "<Space>fe", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             cwd = vim.fn.stdpath('config'),
           }
         end,
@@ -33,7 +35,7 @@ return {
       )
       vim.keymap.set(
         "n", "<Space>fE", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             cwd = vim.fn.stdpath('config'),
             hidden = true,
           }
@@ -42,13 +44,13 @@ return {
       )
       vim.keymap.set(
         "n", "<Space>ff", function()
-          require('telescope.builtin').find_files()
+          builtin.find_files()
         end,
         { desc = "Find files in current directory" }
       )
       vim.keymap.set(
         "n", "<Space>fF", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             hidden = true,
           }
         end,
@@ -56,7 +58,7 @@ return {
       )
       vim.keymap.set(
         "n", "<Space>fh", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             cwd = vim.fn.expand('~'),
           }
         end,
@@ -64,7 +66,7 @@ return {
       )
       vim.keymap.set(
         "n", "<Space>fH", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             cwd = vim.fn.expand('~'),
             hidden = true,
           }
@@ -73,13 +75,13 @@ return {
       )
       vim.keymap.set(
         "n", "<Space>fb", function()
-          require('telescope.builtin').buffers()
+          builtin.buffers()
         end,
         { desc = "Find buffers" }
       )
       vim.keymap.set(
         "n", "<Space>fp", function()
-          require('telescope.builtin').find_files {
+          builtin.find_files {
             cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy"),
             hidden = true,
           }
@@ -89,19 +91,19 @@ return {
 
       vim.keymap.set(
         "n", "<Space>hh", function()
-          require('telescope.builtin').help_tags()
+          builtin.help_tags()
         end,
         { desc = "Find help tags" }
       )
       vim.keymap.set(
         "n", "<Space>hm", function()
-          require('telescope.builtin').man_pages()
+          builtin.man_pages()
         end,
         { desc = "Find man pages" }
       )
       vim.keymap.set(
         "n", "<Space>hk", function()
-          require('telescope.builtin').keymaps()
+          builtin.keymaps()
         end,
         { desc = "Find keymaps" }
       )
