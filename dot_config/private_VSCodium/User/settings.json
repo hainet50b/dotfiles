@@ -80,5 +80,6 @@
       "before": ["<Space>", "g", "f"],
       "commands": ["workbench.action.findInFiles"]
     }
-  ]
+  ],
+  "security.workspace.trust.untrustedFiles": "open"
 }
