@@ -28,12 +28,12 @@ return {
             unit = 'total',
           }),
           subscroll = animate.gen_subscroll.equal({
-            predicate = function()
+            predicate = function(total_scroll)
               if mouse_scrolled then
                 mouse_scrolled = false
                 return false
               else
-                return true
+                return total_scroll > 1
               end
             end,
           })
