@@ -41,16 +41,16 @@ vim.keymap.set("v", "<space>x", ":lua<cr>")
 vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end)
 
 -- Window
-vim.keymap.set("n", "<space>wj", function()
-  vim.cmd.split()
-  vim.cmd.wincmd("j")
-end)
-vim.keymap.set("n", "<space>wk", vim.cmd.split)
 vim.keymap.set("n", "<space>wl", function()
   vim.cmd.vsplit()
   vim.cmd.wincmd("l")
 end)
 vim.keymap.set("n", "<space>wh", vim.cmd.vsplit)
+vim.keymap.set("n", "<space>wj", function()
+  vim.cmd.split()
+  vim.cmd.wincmd("j")
+end)
+vim.keymap.set("n", "<space>wk", vim.cmd.split)
 
 -- Terminal
 vim.keymap.set("n", "<space>tt", vim.cmd.term)
