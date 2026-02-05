@@ -21,8 +21,6 @@ cmvn() {
     port_option=(-p "$port:$port")
   fi
 
-  echo "$@"
-
   docker container run --rm -it \
     --mount type=bind,src=$PWD,dst=/workdir \
     -w /workdir \
