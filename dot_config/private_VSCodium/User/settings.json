@@ -79,6 +79,15 @@
     {
       "before": ["<Space>", "g", "d"],
       "commands": ["workbench.action.findInFiles"]
+    },
+
+    {
+      "before": ["<Space>", "e", "d"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<Space>", "e", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     }
   ],
   "security.workspace.trust.untrustedFiles": "open"

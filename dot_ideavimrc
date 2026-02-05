@@ -44,3 +44,6 @@ nnoremap <Space>fd :action GotoFile<CR>
 nnoremap <Space>fb :action RecentFiles<CR>
 nnoremap <Space>gg :action Find<CR>
 nnoremap <Space>gd :action FindInPath<CR>
+
+" Explorer
+nnoremap <Space>ed :action ActivateProjectToolWindow<CR>
