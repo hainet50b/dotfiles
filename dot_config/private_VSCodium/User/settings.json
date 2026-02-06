@@ -90,5 +90,6 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     }
   ],
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.renderWhitespace": "trailing"
 }
