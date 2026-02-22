@@ -41,6 +41,9 @@ vim.keymap.set("v", "<Space>x", ":lua<cr>")
 vim.keymap.set("n", "<Space>fo", function() vim.lsp.buf.format() end)
 
 -- Window
+vim.keymap.set("n", "<Space>ww", function()
+  vim.api.nvim_command("enew")
+end)
 vim.keymap.set("n", "<Space>wl", function()
   vim.cmd.vsplit()
   vim.cmd.wincmd("l")
