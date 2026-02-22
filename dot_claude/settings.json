@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cargo build:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo run:*)",
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(rustup:*)"
+    ],
+    "deny": [
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "disableBypassPermissionsMode": "disable",
+  "cleanupPeriodDays": 30
+}
