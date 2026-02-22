@@ -91,5 +91,6 @@
     }
   ],
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.renderWhitespace": "trailing"
+  "editor.renderWhitespace": "trailing",
+  "git.autofetch": true
 }
