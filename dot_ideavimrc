@@ -24,9 +24,6 @@ inoremap fd <Esc>
 " IdeaVim
 nnoremap <Space><Space>x :action IdeaVim.ReloadVimRc.reload<CR>
 
-" Language
-nnoremap <Space>fo :action ReformatCode<CR>
-
 " Tab
 nnoremap <Space>wl :action MoveTabRight<CR>
 nnoremap <Space>wh :action TabShiftActions.ShiftLeft<CR>
@@ -43,14 +40,21 @@ nnoremap <Space>tj :action ActivateTerminalToolWindow<CR>
 " Also defined in IDE keymap settings
 " nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
 
-" Search
+" File search
 nnoremap <Space>fe :edit ~/.ideavimrc<CR>
 nnoremap <Space>fs :action ShowSettings<CR>
 nnoremap <Space>fa :action SearchEverywhere<CR>
 nnoremap <Space>fd :action GotoFile<CR>
 nnoremap <Space>fb :action RecentFiles<CR>
+
+" Text search
 nnoremap <Space>gg :action Find<CR>
 nnoremap <Space>gd :action FindInPath<CR>
 
 " Explorer
 nnoremap <Space>ed :action ActivateProjectToolWindow<CR>
+
+" Code
+nnoremap <Space>cf :action ReformatCode<CR>
+nnoremap <Space>cr :action RenameElement<CR>
+nnoremap <Space>cs :action FileStructurePopup<CR>
