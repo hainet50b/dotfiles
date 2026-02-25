@@ -25,9 +25,10 @@ inoremap fd <Esc>
 nnoremap <Space><Space>x :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Tab
-nnoremap <Space>wl :action MoveTabRight<CR>
+" Tab Shifter: https://plugins.jetbrains.com/plugin/7475-tab-shifter
+nnoremap <Space>wl :action TabShiftActions.ShiftRight<CR>
 nnoremap <Space>wh :action TabShiftActions.ShiftLeft<CR>
-nnoremap <Space>wj :action MoveTabDown<CR>
+nnoremap <Space>wj :action TabShiftActions.ShiftDown<CR>
 nnoremap <Space>wk :action TabShiftActions.ShiftUp<CR>
 nnoremap <Space>wo :action MoveEditorToOppositeTabGroup<CR>
 
