@@ -21,11 +21,6 @@
     },
 
     {
-      "before": ["<Space>", "f", "o"],
-      "commands": ["editor.action.formatDocument"]
-    },
-
-    {
       "before": ["<Space>", "w", "l"],
       "commands": ["workbench.action.moveEditorToRightGroup"]
     },
@@ -97,6 +92,23 @@
     {
       "before": ["<Space>", "e", "t"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+
+    {
+      "before": ["<Space>", "c", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<Space>", "c", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<Space>", "c", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<Space>", "c", "S"],
+      "commands": ["outline.focus"]
     }
   ],
   "security.workspace.trust.untrustedFiles": "open",
