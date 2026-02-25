@@ -47,7 +47,16 @@
     },
 
     {
+      "before": ["<Space>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+
+    {
       "before": ["<Space>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["<Space>", "t", "j"],
       "commands": ["workbench.action.terminal.toggleTerminal"]
     },
 
