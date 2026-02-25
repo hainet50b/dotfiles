@@ -58,3 +58,4 @@ nnoremap <Space>ed :action ActivateProjectToolWindow<CR>
 nnoremap <Space>cf :action ReformatCode<CR>
 nnoremap <Space>cr :action RenameElement<CR>
 nnoremap <Space>cs :action FileStructurePopup<CR>
+nnoremap <Space>cS :action ActivateStructureToolWindow<CR>
