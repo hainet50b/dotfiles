@@ -29,11 +29,17 @@ nnoremap <Space>fo :action ReformatCode<CR>
 
 " Tab
 nnoremap <Space>wl :action MoveTabRight<CR>
+nnoremap <Space>wh :action TabShiftActions.ShiftLeft<CR>
 nnoremap <Space>wj :action MoveTabDown<CR>
+nnoremap <Space>wk :action TabShiftActions.ShiftUp<CR>
 nnoremap <Space>wo :action MoveEditorToOppositeTabGroup<CR>
+
+" Buffer (= IDE's tab)
+nnoremap <Space>bd :bd<CR>
 
 " Terminal
 nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
+nnoremap <Space>tj :action ActivateTerminalToolWindow<CR>
 " Also defined in IDE keymap settings
 " nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
 
