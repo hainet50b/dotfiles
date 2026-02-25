@@ -9,7 +9,10 @@
       "Bash(cargo run:*)",
       "Bash(rustc --version)",
       "Bash(cargo --version)",
-      "Bash(rustup:*)"
+      "Bash(rustup:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
     ],
     "deny": [
       "Bash(curl *)",
