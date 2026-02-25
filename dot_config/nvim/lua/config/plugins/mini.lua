@@ -4,6 +4,17 @@ return {
     enabled = true,
     version = false,
     config = function()
+      -- mini.bufremove
+      local bufremove = require('mini.bufremove')
+      bufremove.setup()
+
+      vim.keymap.set(
+        "n", "<Space>bd", function()
+          bufremove.delete()
+        end,
+        { desc = "Delete buffer with keeping window layout" }
+      )
+
       -- mini.statusline
       require('mini.statusline').setup()
 
