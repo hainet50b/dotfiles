@@ -21,7 +21,9 @@
       "Bash(git log)",
       "Bash(git log *)",
       "Bash(git -C * log)",
-      "Bash(git -C * log *)"
+      "Bash(git -C * log *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.github.com)"
     ],
     "deny": [
       "Bash(curl *)",
